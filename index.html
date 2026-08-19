@@ -6,218 +6,18 @@
   <title>Gnostic Luciferianism | Archive & Research Codex</title>
   <meta name="description" content="A research archive dedicated to Gnostic Luciferianism, non-dual gnosis, and esoteric philosophy.">
   
-  <!-- Fonts: Cinzel for Dark Academia headers, JetBrains Mono for Cyberpunk terminal data, EB Garamond for long-form reading -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg-void: #09090b;
-      --bg-terminal: #11100c;
-      --border-terminal: #2d2613;
-      --amber-base: #ffb000;
-      --amber-dim: #a67300;
-      --amber-bright: #ffd466;
-      --parchment: #d4cfc4;
-      --parchment-muted: #8c877b;
-      --font-mono: 'JetBrains Mono', monospace;
-      --font-serif: 'EB Garamond', Georgia, serif;
-      --font-title: 'Cinzel', serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: var(--bg-void);
-      color: var(--parchment);
-      font-family: var(--font-serif);
-      font-size: 1.15rem;
-      line-height: 1.7;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 1rem;
-    }
-
-    /* Ambient Scanline Overlay */
-    body::before {
-      content: " ";
-      position: fixed;
-      top: 0; left: 0; bottom: 0; right: 0;
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%);
-      background-size: 100% 4px;
-      pointer-events: none;
-      z-index: 100;
-    }
-
-    ::selection {
-      background: var(--amber-base);
-      color: var(--bg-void);
-    }
-
-    .container {
-      width: 100%;
-      max-width: 820px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Terminal HUD & Framing */
-    .terminal-frame {
-      background-color: var(--bg-terminal);
-      border: 1px solid var(--border-terminal);
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 0 10px rgba(255, 176, 0, 0.05);
-      border-radius: 4px;
-      padding: 2rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .terminal-header {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--amber-dim);
-      border-bottom: 1px solid var(--border-terminal);
-      padding-bottom: 0.75rem;
-      margin-bottom: 2rem;
-      display: flex;
-      justify-content: space-between;
-      letter-spacing: 0.08em;
-    }
-
-    .status-active {
-      color: var(--amber-bright);
-      text-shadow: 0 0 8px rgba(255, 176, 0, 0.6);
-    }
-
-    /* Typography Hierarchy */
-    h1, h2, h3 {
-      font-family: var(--font-title);
-      color: var(--amber-bright);
-      text-shadow: 0 0 6px rgba(255, 176, 0, 0.3);
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-
-    h1 {
-      font-size: 2.1rem;
-      line-height: 1.25;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-
-    .subtitle {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      color: var(--amber-base);
-      margin-bottom: 2rem;
-      letter-spacing: 0.05em;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      border-left: 2px solid var(--amber-base);
-      padding-left: 0.75rem;
-    }
-
-    p {
-      margin-bottom: 1.4rem;
-      color: var(--parchment);
-    }
-
-    /* Terminal Highlight & Quotes */
-    .terminal-callout {
-      border: 1px solid var(--border-terminal);
-      background: rgba(0, 0, 0, 0.4);
-      padding: 1.25rem 1.5rem;
-      margin: 1.75rem 0;
-      font-style: italic;
-      color: var(--parchment);
-      position: relative;
-    }
-
-    .terminal-callout::before {
-      content: "[GNOSIS_AXIOM]";
-      position: absolute;
-      top: -10px;
-      left: 12px;
-      background: var(--bg-terminal);
-      padding: 0 6px;
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--amber-base);
-      font-style: normal;
-      letter-spacing: 0.05em;
-    }
-
-    /* Codex Index Links */
-    .codex-index {
-      list-style: none;
-      margin-top: 1.5rem;
-    }
-
-    .codex-item {
-      border: 1px solid var(--border-terminal);
-      margin-bottom: 0.75rem;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.25);
-      transition: all 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .codex-item:hover {
-      border-color: var(--amber-base);
-      background: rgba(255, 176, 0, 0.03);
-      box-shadow: 0 0 8px rgba(255, 176, 0, 0.15);
-    }
-
-    .codex-title {
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--amber-base);
-      text-decoration: none;
-    }
-
-    .codex-desc {
-      font-size: 0.95rem;
-      color: var(--parchment-muted);
-      line-height: 1.4;
-    }
-
-    /* Footer & Portal */
-    footer {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--amber-dim);
-      text-align: center;
-      padding: 1.5rem 0;
-      border-top: 1px solid var(--border-terminal);
-    }
-
-    footer a {
-      color: var(--amber-base);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <div class="terminal-frame">
+    <main class="terminal-frame">
       <div class="terminal-header">
         <span>ARCHIVE_NODE // GNOSTICLUCIFERIAN.ORG</span>
         <span class="status-active">LINK_ACTIVE [200 OK]</span>
@@ -251,7 +51,7 @@
           </li>
           <li class="codex-item">
             <a href="#" class="codex-title">DOC_02 // THE_BEN_KADOSH_FALLACY.TXT</a>
-            <span class="codex-desc">A critical analysis dissecting *The World Builder*—why benevolent Demiurgic systems represent Hermeticism, not Gnosticism.</span>
+            <span class="codex-desc">A critical analysis dissecting <em>The World Builder</em>—why benevolent Demiurgic systems represent Hermeticism, not Gnosticism.</span>
           </li>
           <li class="codex-item">
             <a href="#" class="codex-title">DOC_03 // CURRICULUM_AND_INITIATION.TXT</a>
@@ -259,7 +59,7 @@
           </li>
         </ul>
       </section>
-    </div>
+    </main>
 
     <footer>
       <p>ESTABLISHED BY <a href="https://jeremycrow.com" target="_blank" rel="noopener">JEREMY CROW</a> // OPERATIONAL SCHOOL: <a href="https://novusordoluciferi.com" target="_blank" rel="noopener">NOVUS ORDO LUCIFERI</a></p>
