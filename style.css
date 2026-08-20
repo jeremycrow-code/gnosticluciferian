@@ -198,16 +198,14 @@ p {
   width: 100%;
   height: auto;
   opacity: 0.95;
-  filter: invert(75%) sepia(90%) saturate(1500%) hue-rotate(12deg) brightness(105%) contrast(105%)
-          drop-shadow(0 0 16px rgba(255, 176, 0, 0.5));
+  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.25));
   transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
 .emblem-img:hover {
   opacity: 1;
   transform: scale(1.03);
-  filter: invert(75%) sepia(90%) saturate(1500%) hue-rotate(12deg) brightness(115%) contrast(105%)
-          drop-shadow(0 0 24px rgba(255, 176, 0, 0.75));
+  filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.45));
 }
 
 /* Footer */
