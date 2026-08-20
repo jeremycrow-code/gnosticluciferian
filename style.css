@@ -194,10 +194,11 @@ p {
 }
 
 .emblem-img {
-  max-width: 200px;
+  max-width: 360px;
+  width: 100%;
   height: auto;
-  opacity: 0.9;
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2));
+  opacity: 0.95;
+  filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.25));
   transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
